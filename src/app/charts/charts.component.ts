@@ -2,6 +2,7 @@ import { Component, NgModule, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { single } from '../data/data';
+import { ChartsDataService } from '../charts-data.service';
 
 
 @Component({
@@ -25,8 +26,10 @@ export class ChartsComponent implements OnInit {
   };
 
 
-  constructor() {
-    Object.assign(this, {single});
+  constructor(
+    private dataService: ChartsDataService
+  ) {
+    // Object.assign(this, {single});
   }
 
   onSelect(data): void {
@@ -42,6 +45,7 @@ export class ChartsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.single = this.dataService.getData();
   }
 
 }

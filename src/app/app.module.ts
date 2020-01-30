@@ -15,6 +15,7 @@ import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { NotFound404Component } from './not-found404/not-found404.component';
 import { SettingsComponent } from './settings/settings.component';
+import {ChartsDataService} from './charts-data.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { SettingsComponent } from './settings/settings.component';
     NgxChartsModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [ChartsDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
