@@ -11,6 +11,7 @@ import { ChartsComponent } from './charts/charts.component';
 import { HomeComponent } from './home/home.component';
 import { VerticalBarChartComponent } from './vertical-bar-chart/vertical-bar-chart.component';
 import { MenuComponent } from './menu/menu.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MenuComponent } from './menu/menu.component';
     ChartsComponent,
     HomeComponent,
     VerticalBarChartComponent,
-    MenuComponent
+    MenuComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
