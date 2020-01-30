@@ -1,0 +1,14 @@
+.main-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  background-color: grey;
+  align-items: center;
+  height: 5vh;
+  width: 100%;
+}
+.main-menu-item {
+  font-size: 20px;
+  margin-left: 20px;
+  text-decoration: none;
+}

@@ -1,18 +1,22 @@
 export const single = [
   {
-    "name": "Germany",
+    "name": "США",
     "value": 8940000
   },
   {
-    "name": "USA",
+    "name": "Германия",
     "value": 5000000
   },
   {
-    "name": "France",
+    "name": "Китай",
     "value": 7200000
   },
   {
-    "name": "UK",
+    "name": "Россия",
     "value": 6200000
+  },
+  {
+    "name": "Белоруссия",
+    "value": 1000000
   }
 ];

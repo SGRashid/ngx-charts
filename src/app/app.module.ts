@@ -2,17 +2,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {allAppRoutes} from './routes';
-
-import { AppComponent } from './app.component';
-import { ChartsComponent } from './charts/charts.component';
 import {FormsModule} from '@angular/forms';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
+import { AppComponent } from './app.component';
+import { ChartsComponent } from './charts/charts.component';
+import { HomeComponent } from './home/home.component';
+import { VerticalBarChartComponent } from './vertical-bar-chart/vertical-bar-chart.component';
+import { MenuComponent } from './menu/menu.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    ChartsComponent
+    ChartsComponent,
+    HomeComponent,
+    VerticalBarChartComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
