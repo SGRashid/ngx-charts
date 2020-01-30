@@ -13,6 +13,7 @@ import { VerticalBarChartComponent } from './vertical-bar-chart/vertical-bar-cha
 import { MenuComponent } from './menu/menu.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
+import { NotFound404Component } from './not-found404/not-found404.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FooterComponent } from './footer/footer.component';
     VerticalBarChartComponent,
     MenuComponent,
     AboutComponent,
-    FooterComponent
+    FooterComponent,
+    NotFound404Component
   ],
   imports: [
     BrowserModule,
