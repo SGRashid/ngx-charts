@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { VerticalBarChartComponent } from './vertical-bar-chart/vertical-bar-chart.component';
 import { MenuComponent } from './menu/menu.component';
 import { AboutComponent } from './about/about.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AboutComponent } from './about/about.component';
     HomeComponent,
     VerticalBarChartComponent,
     MenuComponent,
-    AboutComponent
+    AboutComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
