@@ -10,4 +10,19 @@
 .aside-home {
   flex-grow: 1;
 }
-.news { min-height: 200px; }
+.news {
+  min-height: 500px;
+}
+.input2 { margin-left: 10px; }
+.add { margin-left: 10px; }
+.result {
+  margin-left: 10px;
+  background-color: #950000;
+}
+.code-bar {
+  margin-top: 20px;
+  min-height: 500px;
+  width: 400px;
+  padding: 10px;
+  border-radius: 5px;
+}

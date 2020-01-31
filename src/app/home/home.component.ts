@@ -8,7 +8,8 @@ import {ChartsDataService} from '../charts-data.service';
 })
 export class HomeComponent implements OnInit {
 
-  changes = [];
+  // changes = [];
+  single = [];
 
   constructor(private dataService: ChartsDataService) {}
 
@@ -19,5 +20,6 @@ export class HomeComponent implements OnInit {
     this.dataService.addData(name, value);
   }
   ngOnInit() {
+    this.single = this.dataService.getData();
   }
 }
