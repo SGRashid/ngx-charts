@@ -8,16 +8,16 @@ import {ChartsDataService} from '../charts-data.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private dataService: ChartsDataService) { }
+  changes = [];
+
+  constructor(private dataService: ChartsDataService) {}
 
   alert(message: any, message2: any) {
     alert(`Название: ${message}\nЗначение: ${message2}`);
   }
   addData(name: string, value: number) {
     this.dataService.addData(name, value);
-    // alert(`Название: ${name}\nЗначение: ${value}`);
   }
   ngOnInit() {
   }
-
 }

@@ -1,0 +1,9 @@
+.main-home-page {
+  width: 700px;
+  height: 1050px;
+}
+.home-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

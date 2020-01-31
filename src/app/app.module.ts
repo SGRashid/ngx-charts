@@ -16,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NotFound404Component } from './not-found404/not-found404.component';
 import { SettingsComponent } from './settings/settings.component';
 import {ChartsDataService} from './charts-data.service';
+import { ResultComponent } from './result/result.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {ChartsDataService} from './charts-data.service';
     AboutComponent,
     FooterComponent,
     NotFound404Component,
-    SettingsComponent
+    SettingsComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,

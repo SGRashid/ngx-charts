@@ -31,7 +31,6 @@ export class ChartsDataService {
   }
   addData(countryName: string, countryValue: number) {
     this.data.push({name: countryName, value: countryValue});
-    console.log(this.data);
   }
   constructor() { }
 }

@@ -3,17 +3,20 @@
   <div class="main-home-page card">
     <h1>Примеры диаграмм</h1>
     <h3>Круговая диаграмма</h3>
-    <app-charts></app-charts>
+    <app-charts [changes]="changes"></app-charts>
     <h3>Вертикальные столбцы</h3>
     <app-vertical-bar-chart></app-vertical-bar-chart>
   </div>
   <div class="aside-home card">
     <div class="card title-font white red-beck">СТРАНЫ</div>
     <div class="news card">
+      <span>Страна </span>
       <input [(ngModel)]="name" placeholder="название"/>
+      <span> Параметр </span>
       <input [(ngModel)]="value" placeholder="значение"/>
       <button (click)="addData(name, value)">добавить</button>
       <button (click)="alert(name, value)">alert test</button>
+      <div><a routerLink="result">Построить</a> </div>
     </div>
     <div class="news card"></div>
   </div>

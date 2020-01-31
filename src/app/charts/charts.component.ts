@@ -1,4 +1,4 @@
-import { Component, NgModule, OnInit } from '@angular/core';
+import {Component, NgModule, OnInit, Input} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 // import { single } from '../data/data';
@@ -12,6 +12,9 @@ import { colors } from '../data/colors';
   styleUrls: ['./charts.component.css']
 })
 export class ChartsComponent implements OnInit {
+
+  @Input() changes: any;
+
   single: any[];
   view: any[]=[700, 400];
   colors: string[];
@@ -51,5 +54,4 @@ export class ChartsComponent implements OnInit {
   ngOnInit() {
     this.single = this.dataService.getData();
   }
-
 }
