@@ -17,8 +17,16 @@ export class HomeComponent implements OnInit {
   }
   addData(name: string, value: number) {
     this.dataService.addData(name, value);
+    this.ngOnInit();
   }
   cmd(command: string) {
+    if (
+      command === 'delete all' ||
+      command === 'del all'
+    ) {
+      this.clear();
+      return;
+    }
     const correctCommand = command
       .split('')
       .filter(char => char !== ',' && char !== ';')
@@ -29,6 +37,10 @@ export class HomeComponent implements OnInit {
     // console.log(countryName);
     // console.log(countryValue);
     this.addData(countryName, Number(countryValue));
+  }
+  clear(){
+    this.dataService.clear();
+    this.ngOnInit();
   }
   ngOnInit() {
     this.single = this.dataService.getData();

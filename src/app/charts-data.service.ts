@@ -41,5 +41,8 @@ export class ChartsDataService {
     }
     this.data.push({name: countryName, value: countryValue});
   }
+  clear() {
+    this.data = [];
+  }
   constructor() { }
 }

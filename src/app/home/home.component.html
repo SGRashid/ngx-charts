@@ -14,6 +14,7 @@
       <input class="input input2" [(ngModel)]="value" placeholder="значение"/>
       <button [type]="submit" class="button add" (click)="addData(name, value)">добавить</button>
       <button class="button result" routerLink="result">построить</button>
+      <button class="button" (click)="clear()">удалить ВСЁ</button>
       <div class="code-bar black-beck">
         <code>
           <p class="white">____:table:____</p>
