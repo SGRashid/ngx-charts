@@ -12,15 +12,24 @@
     <div class="news card">
       <input class="input" [(ngModel)]="name" placeholder="наименование"/>
       <input class="input input2" [(ngModel)]="value" placeholder="значение"/>
-      <button class="button add" (click)="addData(name, value)">добавить</button>
+      <button [type]="submit" class="button add" (click)="addData(name, value)">добавить</button>
       <button class="button result" routerLink="result">построить</button>
       <div class="code-bar black-beck">
         <code>
+          <p class="white">____:table:____</p>
           <p class="white" *ngFor="let item of single">
             <span>name: </span>
             <span class="red">{{item.name}}</span>
             <span>, value: </span>
-            <span class="red">{{item.value}}</span></p>
+            <span class="red">{{item.value}}</span>
+          </p>
+          <span class="white">inp></span>
+          <span class="white blinking">\</span>
+          <input
+            class="cmd black-beck white"
+            [(ngModel)]="textForm"
+            (keydown.enter)="cmd(textForm); textForm = ''"
+          />
         </code>
       </div>
     </div>

@@ -30,6 +30,15 @@ export class ChartsDataService {
     return this.data;
   }
   addData(countryName: string, countryValue: number) {
+    if (
+      countryName === null ||
+      countryValue === null
+    ) { return; }
+    if (
+      this.data.map(elem => elem.name).includes(countryName)
+    ) {
+      this.data = this.data.filter(elem => elem.name !== countryName);
+    }
     this.data.push({name: countryName, value: countryValue});
   }
   constructor() { }

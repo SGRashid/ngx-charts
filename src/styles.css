@@ -23,3 +23,17 @@
   height: 30px;
   border-radius: 5px;
 }
+.blinking {
+  font-weight: bold;
+  animation: blink 1s linear infinite;
+}
+.cmd {
+  border: none;
+  outline:none;
+}
+@keyframes blink {
+  0% { color: black; }
+  50% { color: black; }
+  51% { color: white; }
+  100% { color: white; }
+}
