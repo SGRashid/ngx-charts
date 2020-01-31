@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { single } from '../data/data';
+import { colors } from '../data/colors';
+import {ChartsDataService} from '../charts-data.service';
 
 @Component({
   selector: 'app-vertical-bar-chart',
@@ -9,6 +11,7 @@ import { single } from '../data/data';
 export class VerticalBarChartComponent implements OnInit {
   single: any[];
   multi: any[];
+  colors: string[];
 
   view: any[] = [700, 400];
 
@@ -23,15 +26,20 @@ export class VerticalBarChartComponent implements OnInit {
   yAxisLabel = 'Population';
 
   colorScheme = {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA', 'DeepSkyBlue']
+    domain: colors
+    // domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA', 'DeepSkyBlue']
   };
 
-  constructor() {
-    Object.assign(this, { single })
+  constructor(
+    private dataService: ChartsDataService
+  ) {
+    // Object.assign(this, { single })
   }
 
   onSelect(event) {
     console.log(event);
   }
-  ngOnInit() {}
+  ngOnInit() {
+    this.single = this.dataService.getData();
+  }
 }
