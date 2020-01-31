@@ -29,8 +29,9 @@ export class ChartsDataService {
   getData(): any[] {
     return this.data;
   }
-  appData(countryName: string, countryValue: number) {
+  addData(countryName: string, countryValue: number) {
     this.data.push({name: countryName, value: countryValue});
+    console.log(this.data);
   }
   constructor() { }
 }

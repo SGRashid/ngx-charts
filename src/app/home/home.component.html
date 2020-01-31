@@ -9,8 +9,12 @@
   </div>
   <div class="aside-home card">
     <div class="card title-font white red-beck">СТРАНЫ</div>
-    <div class="news card"></div>
-    <div class="news card"></div>
+    <div class="news card">
+      <input [(ngModel)]="name" placeholder="название"/>
+      <input [(ngModel)]="value" placeholder="значение"/>
+      <button (click)="addData(name, value)">добавить</button>
+      <button (click)="alert(name, value)">alert test</button>
+    </div>
     <div class="news card"></div>
   </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ChartsDataService} from '../charts-data.service';
 
 @Component({
   selector: 'app-home',
@@ -7,8 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataService: ChartsDataService) { }
 
+  alert(message: any, message2: any) {
+    alert(`Название: ${message}\nЗначение: ${message2}`);
+  }
+  addData(name: string, value: number) {
+    this.dataService.addData(name, value);
+    // alert(`Название: ${name}\nЗначение: ${value}`);
+  }
   ngOnInit() {
   }
 

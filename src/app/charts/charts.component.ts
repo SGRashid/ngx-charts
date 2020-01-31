@@ -1,8 +1,9 @@
 import { Component, NgModule, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { single } from '../data/data';
+// import { single } from '../data/data';
 import { ChartsDataService } from '../charts-data.service';
+import { colors } from '../data/colors';
 
 
 @Component({
@@ -13,6 +14,7 @@ import { ChartsDataService } from '../charts-data.service';
 export class ChartsComponent implements OnInit {
   single: any[];
   view: any[]=[700, 400];
+  colors: string[];
 
   //options
   gradient: boolean = true;
@@ -22,7 +24,8 @@ export class ChartsComponent implements OnInit {
   legendPosition: string = "below";
 
   colorScheme = {
-    domain: ["#5AA454", "#A10A28", "#C7B42C", "#AAAAAA", "DeepSkyBlue"]
+    // domain: ["#5AA454", "#A10A28", "#C7B42C", "#AAAAAA", "DeepSkyBlue", "grey", "orange", "lightcoral"]
+    domain: colors
   };
 
 
@@ -30,6 +33,7 @@ export class ChartsComponent implements OnInit {
     private dataService: ChartsDataService
   ) {
     // Object.assign(this, {single});
+    // Object.assign(this, {colors});
   }
 
   onSelect(data): void {
