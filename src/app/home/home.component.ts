@@ -36,7 +36,18 @@ export class HomeComponent implements OnInit {
       .filter(word => word !== 'name:' && word !== 'value:');
     // console.log(countryName);
     // console.log(countryValue);
+    if (
+      countryName === 'delete' ||
+      countryName === 'del'
+    ) {
+      this.delete(countryValue);
+      return;
+    }
     this.addData(countryName, Number(countryValue));
+  }
+  delete(name: string) {
+    this.dataService.delete(name);
+    this.ngOnInit();
   }
   clear(){
     this.dataService.clear();

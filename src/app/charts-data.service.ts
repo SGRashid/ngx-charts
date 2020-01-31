@@ -41,6 +41,9 @@ export class ChartsDataService {
     }
     this.data.push({name: countryName, value: countryValue});
   }
+  delete(countryName: string) {
+    this.data = this.data.filter(elem => elem.name !== countryName);
+  }
   clear() {
     this.data = [];
   }

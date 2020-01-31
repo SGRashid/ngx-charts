@@ -14,24 +14,47 @@
       <input class="input input2" [(ngModel)]="value" placeholder="значение"/>
       <button [type]="submit" class="button add" (click)="addData(name, value)">добавить</button>
       <button class="button result" routerLink="result">построить</button>
+      <button class="button" (click)="delete(name)">удалить</button>
       <button class="button" (click)="clear()">удалить ВСЁ</button>
-      <div class="code-bar black-beck">
-        <code>
-          <p class="white">____:table:____</p>
-          <p class="white" *ngFor="let item of single">
-            <span>name: </span>
-            <span class="red">{{item.name}}</span>
-            <span>, value: </span>
-            <span class="red">{{item.value}}</span>
-          </p>
-          <span class="white">inp></span>
-          <span class="white blinking">\</span>
-          <input
-            class="cmd black-beck white"
-            [(ngModel)]="textForm"
-            (keydown.enter)="cmd(textForm); textForm = ''"
-          />
-        </code>
+      <div class="cmd-container">
+        <div class="code-bar black-beck">
+          <code>
+            <p class="white">____:table:____</p>
+            <p class="white" *ngFor="let item of single">
+              <span>name: </span>
+              <span class="red">{{item.name}}</span>
+              <span>, value: </span>
+              <span class="red">{{item.value}}</span>
+            </p>
+            <span class="white">inp></span>
+            <span class="white blinking">\</span>
+            <input
+              class="cmd black-beck white"
+              [(ngModel)]="textForm"
+              (keydown.enter)="cmd(textForm); textForm = ''"
+            />
+          </code>
+        </div>
+        <div class="help">
+          <code>
+            <p>HELP</p>
+            <div class="margin-20">
+              <p>print:</p>
+              <p class="red">name: name, value: value</p>
+              <p>or</p>
+              <p class="red">name value</p>
+              <p>for add data.</p>
+              <p>print:</p>
+              <p><span class="red">delete name</span> - for delete data.</p>
+              <p>or</p>
+              <p class="red">del name</p>
+              <p>print:</p>
+              <p><span class="red">delete all</span> - for delete all.</p>
+              <p>or</p>
+              <p class="red">del all</p>
+            </div>
+          </code>
+        </div>
       </div>
     </div>
   </div>
