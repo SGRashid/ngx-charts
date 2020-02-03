@@ -1,6 +1,7 @@
 <div class="canvas-chart">
   <div class="canvas-chart__legend">
-    <p class="canvas-chart__item" *ngFor="let item of single">{{item.name}}</p>
+    <p class="canvas-chart__legend__title">Легенда</p>
+    <p class="canvas-chart__legend__item" *ngFor="let item of single">{{item.name}}</p>
   </div>
   <canvas class="canvas-chart__chart" id="chart"></canvas>
 </div>

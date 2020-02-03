@@ -7,23 +7,23 @@ export class ChartsDataService {
   private data: any[] = [
     {
       "name": "США",
-      "value": 8940000
+      "value": 894
     },
     {
       "name": "Германия",
-      "value": 5000000
+      "value": 500
     },
     {
       "name": "Китай",
-      "value": 7200000
+      "value": 720
     },
     {
       "name": "Россия",
-      "value": 6200000
+      "value": 620
     },
     {
       "name": "Франция",
-      "value": 1000000
+      "value": 100
     }
   ];
   getData(): any[] {

@@ -3,5 +3,6 @@
   flex-direction: row;
 }
 .canvas-chart__legend {}
-.canvas-chart__item {}
+.canvas-chart__legend__item {}
+.canvas-chart__legend__title { font-weight: bold; }
 .canvas-chart__chart { border: 1px solid black; }
