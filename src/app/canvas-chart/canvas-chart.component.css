@@ -1,0 +1,7 @@
+.canvas-chart {
+  display: flex;
+  flex-direction: row;
+}
+.canvas-chart__legend {}
+.canvas-chart__item {}
+.canvas-chart__chart { border: 1px solid black; }
